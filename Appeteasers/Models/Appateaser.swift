@@ -8,12 +8,27 @@
 import Foundation
 
 struct Appateaser: Decodable {
-    var imageURL: String
-    var name: String
-    var calories: Int
-    var protein: Int
-    var description: String
-    var price: Int
-    var carbs: Int
+    let id: Int
+    let imageURL: String
+    let name: String
+    let calories: Int
+    let protein: Int
+    let description: String
+    let price: Double
+    let carbs: Int
 }
  
+struct MockData {
+    static let sampleAppateaser: Appateaser = .init(id: 0001,
+                                                    imageURL: "asian-flank-steak",
+                                                    name: "Test Appateaser",
+                                                    calories: 230,
+                                                    protein: 35,
+                                                    description: "Really cool test description",
+                                                    price: 9.99,
+                                                    carbs: 10)
+    static let appateasers = [sampleAppateaser,
+                              sampleAppateaser,
+                              sampleAppateaser,
+                              sampleAppateaser]
+}
