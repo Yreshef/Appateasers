@@ -10,8 +10,10 @@ import SwiftUI
 struct AppateasersListView: View {
     var body: some View {
         NavigationView {
-            Text("Home")
-                .navigationTitle("🍟Appateasers")
+            List(MockData.appateasers, id: \.id) { appateaser in
+                ListViewCell(appateaser: appateaser)
+            }
+            .navigationTitle("🍟Appateasers")
         }
     }
 }

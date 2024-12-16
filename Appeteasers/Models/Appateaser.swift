@@ -31,4 +31,5 @@ struct MockData {
                               sampleAppateaser,
                               sampleAppateaser,
                               sampleAppateaser]
+    
 }
