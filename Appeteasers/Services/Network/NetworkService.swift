@@ -32,7 +32,7 @@ final class NetworkService: NetworkServicable {
         let request = URLRequest(url: url)
         
         let task  = session.dataTask(with: request) { data, response, error in
-            guard let _ = error else {
+            if let _ = error {
                 completed(.failure(.unableToComplete))
                 return
             }

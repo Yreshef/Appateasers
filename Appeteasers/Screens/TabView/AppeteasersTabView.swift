@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct AppeteasersTabView: View {
+    
+    @EnvironmentObject var dependencyContainer: DependencyContainer
+    
     var body: some View {
         VStack {
             TabView {
-                AppateasersListView()
+                AppateasersListView(dependencyContainer: dependencyContainer)
                     .tabItem{
                         Image(systemName: "house")
                         Text("Home")

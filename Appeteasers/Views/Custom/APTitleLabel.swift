@@ -18,7 +18,6 @@ struct APTitleLabel: View {
             .scaledToFit()
             .lineLimit(2)
             .multilineTextAlignment(.leading)
-            .minimumScaleFactor(0.6)
     }
 }
 

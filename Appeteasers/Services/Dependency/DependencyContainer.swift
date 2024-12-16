@@ -7,11 +7,6 @@
 
 import Foundation
 
-//protocol DependencyContaining {
-//    var networkService: NetworkServicable { get }
-//    func initalizeServices()
-//}
-
 final class DependencyContainer: ObservableObject {
     
     let networkService: NetworkServicable = NetworkService()
