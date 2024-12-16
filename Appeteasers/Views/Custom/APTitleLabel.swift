@@ -15,9 +15,9 @@ struct APTitleLabel: View {
         Text(label)
             .font(.title2)
             .fontWeight(.medium)
-            .scaledToFit()
             .lineLimit(2)
             .multilineTextAlignment(.leading)
+            .minimumScaleFactor(0.6)
     }
 }
 

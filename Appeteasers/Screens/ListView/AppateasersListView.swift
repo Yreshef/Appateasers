@@ -16,11 +16,16 @@ struct AppateasersListView: View {
     }
     
     var body: some View {
-        NavigationView {
-            List(viewModel.apparateasers, id: \.id) { appateaser in
-                ListViewCell(appateaser: appateaser)
+        ZStack {
+            NavigationView {
+                List(viewModel.apparateasers, id: \.id) { appateaser in
+                    ListViewCell(appateaser: appateaser)
+                }
+                .navigationTitle("🍟Appateasers")
             }
-            .navigationTitle("🍟Appateasers")
+            if viewModel.isLoading {
+                LoadingView()
+            }
         }
         .alert(item: $viewModel.alertItem) { alert in
             Alert(title: alert.title,
