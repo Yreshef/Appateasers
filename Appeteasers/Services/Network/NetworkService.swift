@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol NetworkServicable {
-    
+    func getAppateasers(completed: @escaping (Result<[Appateaser], APError>) -> Void)
 }
 
 //TODO: Replace completion handler with combine functionality

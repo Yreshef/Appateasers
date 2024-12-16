@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct AppeteasersApp: App {
+    
+    @StateObject var dependencyContainer = DependencyContainer()
+    
     var body: some Scene {
         WindowGroup {
             AppeteasersTabView()
+                .environmentObject(dependencyContainer)
         }
     }
 }
