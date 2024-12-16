@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ATImage: View {
+struct APImage: View {
     
     var imageName: String
     
@@ -21,5 +21,5 @@ struct ATImage: View {
 }
 
 #Preview {
-    ATImage(imageName: MockData.sampleAppateaser.imageURL)
+    APImage(imageName: MockData.sampleAppateaser.imageURL)
 }

@@ -13,15 +13,14 @@ struct ListViewCell: View {
     
     var body: some View {
         HStack {
-            ATImage(imageName: appateaser.imageURL)
+            APImage(imageName: appateaser.imageURL)
             VStack(alignment: .leading, spacing: 5) {
-                ATTitleLabel(label: appateaser.name)
-                ATSubtitleLabel(label: "$\(String(format: "%.2f", appateaser.price))")
+                APTitleLabel(label: appateaser.name)
+                APSubtitleLabel(label: "$\(String(format: "%.2f", appateaser.price))")
                     .frame(minWidth: 50)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         }
-//        .padding(.leading)
     }
 }
 

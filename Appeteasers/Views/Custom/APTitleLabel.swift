@@ -1,5 +1,5 @@
 //
-//  ATSubtitleLabel.swift
+//  ATText.swift
 //  Appeteasers
 //
 //  Created by Yohai on 15/12/2024.
@@ -7,19 +7,21 @@
 
 import SwiftUI
 
-struct ATSubtitleLabel: View {
+struct APTitleLabel: View {
+    
     var label: String
     
     var body: some View {
         Text(label)
-            .font(.title3)
-            .fontWeight(.semibold)
+            .font(.title2)
+            .fontWeight(.medium)
             .scaledToFit()
+            .lineLimit(2)
+            .multilineTextAlignment(.leading)
             .minimumScaleFactor(0.6)
-            .foregroundStyle(.secondary)
     }
 }
 
 #Preview {
-    ATSubtitleLabel(label: "Hi")
+    APTitleLabel(label: "Hi")
 }
